@@ -13,17 +13,22 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: var(--background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Ensure background covers full height */
     margin: 0;
+    padding-top: 60px; /* Space for fixed navbar */
+    box-sizing: border-box; /* Include padding in element's total width and height */
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
     text-align: center;
+    max-width: 960px; /* Constrain container width */
+    margin: 20px auto; /* Center container horizontally and add some top margin */
+    padding: 20px; /* Add padding inside the container */
+    background-color: var(--container-bg-color); /* Add background for visibility */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px var(--box-shadow-color); /* Subtle shadow */
 }
 
 .lotto-machine {
