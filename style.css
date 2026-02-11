@@ -107,3 +107,54 @@ body.dark-mode #theme-toggle-btn {
 body.dark-mode #theme-toggle-btn:hover {
     background-color: #83ad6a;
 }
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--container-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--box-shadow-color);
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #218838;
+}
