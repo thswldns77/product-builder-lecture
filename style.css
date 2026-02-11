@@ -1,11 +1,25 @@
+:root {
+    --background-color: #f0f2f5;
+    --container-bg-color: #fff;
+    --text-color: #333;
+    --button-bg-color: #4CAF50;
+    --button-hover-bg-color: #45a049;
+    --button-text-color: #fff;
+    --box-shadow-color: rgba(0,0,0,0.1);
+    --lotto-ball-text-color: #fff;
+    --lotto-machine-shadow-color: rgba(0,0,0,0.1);
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
+    background-color: var(--background-color);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -13,11 +27,12 @@ body {
 }
 
 .lotto-machine {
-    background-color: #fff;
+    background-color: var(--container-bg-color);
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px var(--lotto-machine-shadow-color);
     margin-bottom: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .lotto-numbers {
@@ -35,13 +50,13 @@ body {
     align-items: center;
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: var(--lotto-ball-text-color);
+    box-shadow: 0 4px 8px var(--box-shadow-color);
 }
 
 #generate-btn {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
     padding: 15px 30px;
     border: none;
     border-radius: 10px;
@@ -51,5 +66,44 @@ body {
 }
 
 #generate-btn:hover {
-    background-color: #45a049;
+    background-color: var(--button-hover-bg-color);
+}
+
+.theme-toggle {
+    margin-bottom: 20px;
+}
+
+#theme-toggle-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+body.dark-mode {
+    --background-color: #282c36;
+    --container-bg-color: #3b404d;
+    --text-color: #e0e0e0;
+    --button-bg-color: #61afef;
+    --button-hover-bg-color: #528fc7;
+    --button-text-color: #fff;
+    --box-shadow-color: rgba(0,0,0,0.3);
+    --lotto-ball-text-color: #e0e0e0;
+    --lotto-machine-shadow-color: rgba(0,0,0,0.3);
+}
+
+body.dark-mode #theme-toggle-btn {
+    background-color: #98c379;
+}
+
+body.dark-mode #theme-toggle-btn:hover {
+    background-color: #83ad6a;
 }

@@ -32,3 +32,38 @@ generateBtn.addEventListener('click', generateLottoNumbers);
 
 // Generate numbers on initial load
 window.addEventListener('load', generateLottoNumbers);
+
+// Theme toggle logic
+const themeToggleBtn = document.getElementById('theme-toggle-btn');
+const body = document.body;
+
+// Function to set the theme
+function setTheme(theme) {
+    if (theme === 'dark') {
+        body.classList.add('dark-mode');
+    } else {
+        body.classList.remove('dark-mode');
+    }
+    localStorage.setItem('theme', theme);
+}
+
+// Function to toggle the theme
+function toggleTheme() {
+    if (body.classList.contains('dark-mode')) {
+        setTheme('light');
+    } else {
+        setTheme('dark');
+    }
+}
+
+// Event listener for the theme toggle button
+themeToggleBtn.addEventListener('click', toggleTheme);
+
+// Apply saved theme on load
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    setTheme(savedTheme);
+} else {
+    // Default to light mode if no theme is saved
+    setTheme('light');
+}
