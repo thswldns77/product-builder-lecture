@@ -166,6 +166,6 @@ form button[type="submit"]:hover {
     background-color: var(--container-bg-color);
     border-radius: 10px;
     box-shadow: 0 5px 15px var(--box-shadow-color);
-    min-height: 300px; /* Ensure it takes up space */
+    min-height: 500px; /* Ensure it takes up space */
     text-align: left; /* Align content to left within the disqus container */
 }
