@@ -158,3 +158,14 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
     background-color: #218838;
 }
+
+/* Disqus thread visibility */
+#disqus_thread {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--container-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--box-shadow-color);
+    min-height: 300px; /* Ensure it takes up space */
+    text-align: left; /* Align content to left within the disqus container */
+}
