@@ -169,3 +169,26 @@ form button[type="submit"]:hover {
     min-height: 500px; /* Ensure it takes up space */
     text-align: left; /* Align content to left within the disqus container */
 }
+
+/* Navbar Styles */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
